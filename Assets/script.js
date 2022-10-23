@@ -10,7 +10,7 @@ function jimmyGenoa() {
   //# of batches need user input
   const batches = 27;
   // set amount recipe per batch
-  const wine = 9;
+  const wine = 9.6;
   const celeryPowder = 23.7;
   const salt = 150;
   const hps = 1.1;
@@ -22,5 +22,9 @@ function jimmyGenoa() {
   const hpsTotal = batches * hps;
   const spiceTotal = batches * spice;
 
-  return;
+  console.log(
+    `For ${batches} batches of JJ Genoa need ${wineTotal} wine pounds, ${celeryPowderTotal} pounds of celery powder, ${saltTotal} pounds of salt, ${hpsTotal} pounds of HPS, and ${spiceTotal} pounds of Spice.`
+  );
 }
+
+jimmyGenoa();
