@@ -7,12 +7,11 @@ HPS 1.1 lbs
 Spice 88 lbs
 */
 
-var getButton = document.getElementById("get-button");
-var recipeGenoa = document.getElementById("j-genoa");
+var getButton = document.getElementById("j-genoa");
 
 function jimmyGenoa() {
   //# of batches need user input
-  const batches = 27;
+  const batches = 1;
   // set amount recipe per batch
   const wine = 9.6;
   const celeryPowder = 23.7;
@@ -30,6 +29,4 @@ function jimmyGenoa() {
     `For ${batches} batches of JJ Genoa need ${wineTotal} wine pounds, ${celeryPowderTotal} pounds of celery powder, ${saltTotal} pounds of salt, ${hpsTotal} pounds of HPS, and ${spiceTotal} pounds of Spice.`
   );
 }
-//getButton.addEventListener("click", jimmyGenoa);
-
 getButton.addEventListener("click", jimmyGenoa);
