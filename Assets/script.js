@@ -19,7 +19,7 @@ var getButtonAroni = document.getElementById("an-pepp");
 
 function jimmyGenoa() {
   //# of batches need user input
-  const batches = 1;
+  let batches = 1;
   // set amount recipe per batch
   const wine = 9.6;
   const celeryPowder = 23.7;
@@ -27,11 +27,18 @@ function jimmyGenoa() {
   const hps = 1.1;
   const spice = 88;
   //total by user input
-  const wineTotal = batches * wine;
-  const celeryPowderTotal = batches * celeryPowder;
-  const saltTotal = batches * salt;
-  const hpsTotal = batches * hps;
-  const spiceTotal = batches * spice;
+  let wineTotal = batches * wine;
+  let celeryPowderTotal = batches * celeryPowder;
+  let saltTotal = batches * salt;
+  let hpsTotal = batches * hps;
+  let spiceTotal = batches * spice;
+
+  document.querySelector("#a-a").textContent = batches;
+  document.querySelector("#a-b").textContent = wineTotal;
+  document.querySelector("#a-c").textContent = saltTotal;
+  document.querySelector("#a-d").textContent = spiceTotal;
+  document.querySelector("#a-e").textContent = celeryPowderTotal;
+  document.querySelector("#a-f").textContent = hpsTotal;
 
   console.log(
     `For ${batches} batches of JJ Genoa need ${wineTotal} wine pounds, ${celeryPowderTotal} pounds of celery powder, ${saltTotal} pounds of salt, ${hpsTotal} pounds of HPS, and ${spiceTotal} pounds of Spice.`
