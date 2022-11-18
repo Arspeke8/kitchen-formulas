@@ -68,11 +68,13 @@ function regularSalame() {
   // set amount recipe per batch
   const wine = 8;
   const salt = 150;
-  const blc = 0.55;
+  const cure = 11.25;
+  const blc = 0.552;
   const llCulture = 0.55;
   const spice = 391.2;
   //total by user input
   let wineTotal = fbatch * wine;
+  let cureTotal = fbatch * cure;
   let llTotal = fbatch * llCulture;
   let saltTotal = fbatch * salt;
   let blcTotal = fbatch * blc;
@@ -80,6 +82,7 @@ function regularSalame() {
 
   document.querySelector("#b-a").textContent = fbatch;
   document.querySelector("#b-b").textContent = wineTotal;
+  document.querySelector("#b-k").textContent = cureTotal;
   document.querySelector("#b-c").textContent = saltTotal;
   document.querySelector("#b-d").textContent = blcTotal;
   document.querySelector("#b-e").textContent = llTotal;
