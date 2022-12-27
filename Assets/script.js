@@ -93,3 +93,35 @@ function regularSalame() {
   );
 }
 getButtonReg.addEventListener("click", regularSalame);
+
+function retailPepperoni() {
+  let fbatch = numOfbatches.value;
+
+  //# of batches need user input
+  //let batches = finalBatches();
+  // set amount recipe per batch
+  const cure = 11.25;
+  const liquidSpice = 12.6;
+  const salt = 100;
+  const hps = 1.1;
+  const spice = 130.2210;
+  //total by user input
+  let cureTotal = fbatch * cure;
+  let liquidSpicetotal = fbatch * liquidSpice;
+  let saltTotal = fbatch * salt;
+  let hpsTotal = fbatch * hps;
+  let spiceTotal = fbatch * spice;
+
+  document.querySelector("#g-a").textContent = fbatch;
+  document.querySelector("#g-b").textContent = cureTotal;
+  document.querySelector("#g-c").textContent = saltTotal;
+  document.querySelector("#g-d").textContent = spiceTotal;
+  document.querySelector("#g-f").textContent = liquidSpicetotal;
+  document.querySelector("#g-g").textContent = hpsTotal;
+
+ 
+}
+
+getButtonRoni.addEventListener("click", retailPepperoni);
+
+
