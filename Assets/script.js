@@ -125,3 +125,29 @@ function retailPepperoni() {
 getButtonRoni.addEventListener("click", retailPepperoni);
 
 
+function apepperoni() {
+  let fbatch = numOfbatches.value;
+
+  //# of batches need user input
+  //let batches = finalBatches();
+  // set amount recipe per batch
+
+  const celeryPowder = 17.01
+  const salt = 100;
+  const hps = 1.1;
+  const spice = 116.1630;
+  //total by user input
+  
+  let celeryPowderTotal = fbatch * celeryPowder;
+  let saltTotal = fbatch * salt;
+  let hpsTotal = fbatch * hps;
+  let spiceTotal = fbatch * spice;
+
+  document.querySelector("#p-a").textContent = fbatch;
+  document.querySelector("#p-c").textContent = saltTotal;
+  document.querySelector("#p-d").textContent = spiceTotal;
+  document.querySelector("#p-e").textContent = celeryPowderTotal;
+  document.querySelector("#p-f").textContent = hpsTotal;
+}
+
+getButtonAroni.addEventListener("click", apepperoni);
