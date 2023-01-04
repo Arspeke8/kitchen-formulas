@@ -151,3 +151,33 @@ function apepperoni() {
 }
 
 getButtonAroni.addEventListener("click", apepperoni);
+
+function allNaturalsalame() {
+  let fbatch = numOfbatches.value;
+  //# of batches need user input
+  //const batches = 1;
+  // set amount recipe per batch
+
+  const salt = 100;
+  const celeryPowder = 18;
+  const blc = 0.552;
+  const llCulture = 0.55;
+  const spice = 336.0816;
+  //total by user input
+  
+  let celeryPowderTotal = fbatch * celeryPowder;
+  let llTotal = fbatch * llCulture;
+  let saltTotal = fbatch * salt;
+  let blcTotal = fbatch * blc;
+  let spiceTotal = fbatch * spice;
+
+  document.querySelector("#as-1").textContent = fbatch;
+  document.querySelector("#as-6").textContent = celeryPowderTotal;
+  document.querySelector("#as-2").textContent = saltTotal;
+  document.querySelector("#as-3").textContent = blcTotal;
+  document.querySelector("#as-4").textContent = llTotal;
+  document.querySelector("#as-5").textContent = spiceTotal;
+
+  
+}
+getButtonAsal.addEventListener("click", allNaturalsalame );
