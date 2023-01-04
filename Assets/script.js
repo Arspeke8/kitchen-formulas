@@ -181,3 +181,32 @@ function allNaturalsalame() {
   
 }
 getButtonAsal.addEventListener("click", allNaturalsalame );
+
+function pepperSalame() {
+  let fbatch = numOfbatches.value;
+  //# of batches need user input
+  //const batches = 1;
+  // set amount recipe per batch
+  
+  const salt = 100;
+  const cure = 11.25;
+  const blc = 0.552;
+  const llCulture = 0.55;
+  const spice = 545.16;
+  //total by user input
+
+  let cureTotal = fbatch * cure;
+  let llTotal = fbatch * llCulture;
+  let saltTotal = fbatch * salt;
+  let blcTotal = fbatch * blc;
+  let spiceTotal = fbatch * spice;
+
+  document.querySelector("#ps-1").textContent = fbatch;
+  document.querySelector("#ps-2").textContent = cureTotal;
+  document.querySelector("#ps-3").textContent = saltTotal;
+  document.querySelector("#ps-4").textContent = blcTotal;
+  document.querySelector("#ps-5").textContent = llTotal;
+  document.querySelector("#ps-6").textContent = spiceTotal;
+
+}
+getButtonPepper.addEventListener("click", pepperSalame);
