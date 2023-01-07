@@ -10,7 +10,7 @@ Spice 88 lbs
 var getButtonJ = document.getElementById("j-genoa");
 var getButtonReg = document.getElementById("r-sal");
 var getButtonLight = document.getElementById("l-sal");
-var getButtonChub = document.getElementById("c-hub");
+var getButtonssalame = document.getElementById("ssalame");
 var getButtonPepper = document.getElementById("p-sal");
 var getButtonAsal = document.getElementById("a-sal");
 var getButtonBurn = document.getElementById("nb-sal");
@@ -210,3 +210,34 @@ function pepperSalame() {
 
 }
 getButtonPepper.addEventListener("click", pepperSalame);
+
+function sweetSalame() {
+  let fbatch = numOfbatches.value;
+  //# of batches need user input
+  //const batches = 1;
+  // set amount recipe per batch
+  const wine = 8;
+  const salt = 150;
+  const cure = 11.25;
+  const blc = 0.552;
+  const llCulture = 0.55;
+  const spice = 387.1824;
+  //total by user input
+  let wineTotal = fbatch * wine;
+  let cureTotal = fbatch * cure;
+  let llTotal = fbatch * llCulture;
+  let saltTotal = fbatch * salt;
+  let blcTotal = fbatch * blc;
+  let spiceTotal = fbatch * spice;
+
+  document.querySelector("#ss-1").textContent = fbatch;
+  document.querySelector("#ss-2").textContent = wineTotal;
+  document.querySelector("#ss-3").textContent = cureTotal;
+  document.querySelector("#ss-4").textContent = saltTotal;
+  document.querySelector("#ss-5").textContent = blcTotal;
+  document.querySelector("#ss-6").textContent = llTotal;
+  document.querySelector("#ss-7").textContent = spiceTotal;
+
+  
+}
+getButtonssalame.addEventListener("click", sweetSalame);
