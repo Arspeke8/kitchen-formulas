@@ -268,3 +268,33 @@ function qtLargepepperoni() {
 }
 
 getButtonqtlargePepperoni.addEventListener("click", qtLargepepperoni);
+
+function NoburnSalame() {
+  let fbatch = numOfbatches.value;
+  //# of batches need user input
+  //const batches = 1;
+  // set amount recipe per batch
+ 
+  const salt = 150;
+  const cure = 11.25;
+  const blc = 0.552;
+  const llCulture = 0.55;
+  const spice = 148.9008;
+  //total by user input
+
+  let cureTotal = fbatch * cure;
+  let llTotal = fbatch * llCulture;
+  let saltTotal = fbatch * salt;
+  let blcTotal = fbatch * blc;
+  let spiceTotal = fbatch * spice;
+
+  document.querySelector("#nb-1").textContent = fbatch; 
+  document.querySelector("#nb-2").textContent = cureTotal;
+  document.querySelector("#nb-3").textContent = saltTotal;
+  document.querySelector("#nb-4").textContent = blcTotal;
+  document.querySelector("#nb-5").textContent = llTotal;
+  document.querySelector("#nb-6").textContent = spiceTotal;
+
+  
+}
+getButtonBurn.addEventListener("click", NoburnSalame);
