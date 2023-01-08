@@ -9,7 +9,7 @@ Spice 88 lbs
 
 var getButtonJ = document.getElementById("j-genoa");
 var getButtonReg = document.getElementById("r-sal");
-var getButtonLight = document.getElementById("l-sal");
+var getButtonqtlargePepperoni = document.getElementById("qtl-roni");
 var getButtonssalame = document.getElementById("ssalame");
 var getButtonPepper = document.getElementById("p-sal");
 var getButtonAsal = document.getElementById("a-sal");
@@ -241,3 +241,30 @@ function sweetSalame() {
   
 }
 getButtonssalame.addEventListener("click", sweetSalame);
+
+function qtLargepepperoni() {
+  let fbatch = numOfbatches.value;
+
+  //# of batches need user input
+  //let batches = finalBatches();
+  // set amount recipe per batch
+
+  const cure = 11.25;
+  const salt = 150;
+  const hps = 1.1;
+  const spice = 123.543;
+  //total by user input
+  
+  let cureTotal = fbatch * cure;
+  let saltTotal = fbatch * salt;
+  let hpsTotal = fbatch * hps;
+  let spiceTotal = fbatch * spice;
+
+  document.querySelector("#qt-1").textContent = fbatch;
+  document.querySelector("#qt-3").textContent = saltTotal;
+  document.querySelector("#qt-4").textContent = spiceTotal;
+  document.querySelector("#qt-2").textContent = cureTotal;
+  document.querySelector("#qt-5").textContent = hpsTotal;
+}
+
+getButtonqtlargePepperoni.addEventListener("click", qtLargepepperoni);
