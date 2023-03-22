@@ -16,6 +16,7 @@ var getButtonAsal = document.getElementById("a-sal");
 var getButtonBurn = document.getElementById("nb-sal");
 var getButtonRoni = document.getElementById("r-pepp");
 var getButtonAroni = document.getElementById("an-pepp");
+var getButtonlowsalt = document.getElementById("lw-sal");
 var getButtonLast = document.getElementById("b-oa");
 let numOfbatches = document.getElementById("num-batches");
 let fbatch = numOfbatches.value;
@@ -298,3 +299,33 @@ function NoburnSalame() {
   
 }
 getButtonBurn.addEventListener("click", NoburnSalame);
+
+function lsSalame() {
+  let fbatch = numOfbatches.value;
+  //# of batches need user input
+  //const batches = 1;
+  // set amount recipe per batch
+  
+  const salt = 50;
+  const cure = 11.25;
+  const blc = 0.552;
+  const llCulture = 0.55;
+  const spice = 439.6032;
+  //total by user input
+
+  let cureTotal = fbatch * cure;
+  let llTotal = fbatch * llCulture;
+  let saltTotal = fbatch * salt;
+  let blcTotal = fbatch * blc;
+  let spiceTotal = fbatch * spice;
+
+  document.querySelector("#ls-1").textContent = fbatch;
+  document.querySelector("#ls-2").textContent = cureTotal;
+  document.querySelector("#ls-3").textContent = saltTotal;
+  document.querySelector("#ls-4").textContent = blcTotal;
+  document.querySelector("#ls-5").textContent = llTotal;
+  document.querySelector("#ls-6").textContent = spiceTotal;
+
+}
+
+getButtonlowsalt.addEventListener("click", lsSalame);
